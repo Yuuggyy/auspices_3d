@@ -5,9 +5,11 @@ import './styles/global.css';
 import MenuPage from './pages/MenuPage';
 import AdminPage from './pages/AdminPage';
 
+const basename = import.meta.env.BASE_URL || '/';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/"       element={<MenuPage />} />
         <Route path="/admin"  element={<AdminPage />} />
